@@ -18,4 +18,6 @@ COPY run.sh /
 
 RUN chmod a+x /run.sh
 
+RUN chmod 777 /run.sh
+
 CMD [ "/run.sh" ]
