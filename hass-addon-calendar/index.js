@@ -345,6 +345,10 @@ async function postEvents(sensorName) {
   let events = JSON.parse(fs.readFileSync("/data/allFutureEvents.json", "utf-8"));
   let numberOfEvents = events[`${sensorName}`].length;
 
+  console.log("debug data ----")
+
+  console.log(events)
+  console.log("end debug data ----")
   try {
     const response = await axios.post(
         "http://supervisor/core/api/states/sensor." + sensorName,
