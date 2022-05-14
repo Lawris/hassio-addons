@@ -375,12 +375,19 @@ let currentOptions = JSON.stringify(options);
 var testOptions = storedOptions == currentOptions;
 
 if (testOptions === true) {
-  let events = JSON.parse(fs.readFileSync("/data/allFutureEvents.json", "utf-8"));
-  if (events !== undefined) {
+  let notParsedEvents;
+  try {
+    notParsedEvents = fs.readFileSync("/data/allFutureEvents.json", "utf-8");
+    let events = JSON.parse(notParsedEvents);
+    if (events !== undefined) {
       postEventsAllCalendars();
       console.log("Previously stored events posted to sensor(s) at: " + new Date());
+    }
+  } catch (err) {
+    console.log("Wesh ya eu une erreur là");
   }
 }
+
   
 else async() => {
   await getEvents();
