@@ -1,6 +1,6 @@
 {
     "name": "Hass Calendar Addon",
-    "version": "0.200",
+    "version": "0.201",
     "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
     "slug": "hass_calendar_addon",
     "init": false,
