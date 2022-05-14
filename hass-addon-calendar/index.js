@@ -348,6 +348,7 @@ async function postEvents(sensorName) {
   console.log("debug data ----")
 
   console.log(numberOfEvents);
+  console.log(postReqOptions);
   console.log("end debug data ----")
   try {
     const response = await axios.post(
