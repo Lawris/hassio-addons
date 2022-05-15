@@ -7,11 +7,12 @@
     "description": "Addon to consume caldav and google calendars and make future calendar events available as sensordata in Home Assistant.",
     "url": "https://github.com/Lawris/hassio-addons/tree/master/hass-addon-calendar",
     "startup": "application",
+    "hassio_role": "default",
     "hassio_api": true,
     "homeassistant_api": true,
     "map": ["share" ],
     "options": {
-      "locale": "nl-be",
+      "locale": "fr",
       "fetchDays": 365,
       "fetchCRON": "*/30 * * * *",
       "calendarList": [
